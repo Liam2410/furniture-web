@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bàn Ghế Gỗ</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo/wood-cabin.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- <link rel="stylesheet" href="/assets/css/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/extra.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./assets/js/money-currency.js"></script>
+    <script src="./assets/js/rating-star.js"></script>
+    <script src="./assets/js/progress-bar.js"></script>
+    <script src="./assets/js/date-time.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    
+    <script>  
+        function page_redirect(){  
+            window.location = "/user/add-to-cart?idProduct=<%= product.id %>";  
+        }
+    </script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <img src="./assets/imgs/logo/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <ul class="navigation">
+                        <li class="item">
+                            <a href="/user" class="simple__link">Trang chủ</a>
+                        </li>
+                        <li class="item">
+                            <a href="" class="simple__link active">Sản phẩm</a>
+                            <ul class="sub__menu">
+                                <li class="item">
+                                    <a href="/user/all-product?type=Bàn Ghế Gỗ" class="sub__link">Bàn Ghế Gỗ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/user/all-product?type=Kệ Ti Vi" class="sub__link">Kệ Ti Vi</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/user/all-product?type=Giường Ngủ" class="sub__link">Giường Ngủ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/user/all-product?type=Tủ Quần Áo" class="sub__link">Tủ Quần Áo</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="sub__link">Bàn Trang Điểm</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="sub__link">Bộ Bàn Ăn</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="sub__link">Phòng Thờ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a href="/user/order" class="simple__link">Đơn hàng</a>
+                        </li>
+                        <li class="item">
+                            <a href="/user/all-post" class="simple__link">Bài viết</a>
+                        </li>
+                        <li class="item">
+                            <a href="/user/contact" class="simple__link">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1">
+                    <a href="/user/cart">
+                        <div class="cart__product--wrap">
+                            <div class="cart__summery">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+                            </div> 
+                            <div style="font-size: 10px;" class="number__product--cart">
+                                <%= cartNumber %>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main__content -->
+    <div class="main__content">
+        <section class="info__detail">
+            <div class="info__product--detail">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="thumb">
+                                <img src="/<%= product.productImage %>" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="content__wrap">
+                                <div class="page">
+                                    <a href="/user/" class="simple__link">Trang chủ</a> / <span>Trang chi tiết</span>
+                                </div>
+                                <h2 class="title">
+                                    <%= product.name %>
+                                </h2>
+                                <div class="price">
+                                    <% if (product.salePercent != null) {%>
+                                        <del>
+                                            <script>displayNumber2VND('<%= product.price %>')</script>
+                                        </del> 
+                                        <span class="retail__price">
+                                            <script>displayNumber2VND('<%= product.price*(1 - (product.salePercent/100)) %>')</script>
+                                        </span>
+                                    <% } else { %>
+                                        <span class="retail__price"><script>displayNumber2VND('<%= product.price %>')</script></span>
+                                    <% } %>
+                                </div>
+                                <div class="sub__title">
+                                    <%= product.name %>
+                                </div>
+                                <div class="delivery-info">
+                                    <div class="material">
+                                        <span>Loại sản phẩm: </span><%= product.type %>
+                                    </div>
+                                    <div class="status">
+                                        <span>Tình trạng: </span>
+                                        <% if (product.quantity > 5) {%>
+                                            Còn hàng
+                                        <% } else { %>
+                                            <span class="text-danger">Chỉ còn duy nhất <%= product.quantity %> sản phẩm</span>
+                                        <% } %>
+                                    </div>
+                                    <div class="delivery-cost">
+                                        <span>Chi phí giao hàng: </span> <br/>
+                                        1. Giao hàng miễn phí tại các địa điểm nằm trong khu vực Bắc Ninh <br/>
+                                        2. Hà Nội, Ba Vì: 250.000 vnđ/đơn hàng <br/>
+                                        3. Các tỉnh thành khác: 400.000 vnđ/đơn hàng <br/>
+                                    </div>
+                                    <div class="delivery-time">
+                                        <span>Thời gian giao hàng: </span>
+                                        Từ 2 đến 5 ngày cho khu vực Bắc Ninh và Hà Nội, 7 đến 10 ngày cho các khu vực khác
+                                    </div>
+                                </div>
+                                <div class="count">
+    
+                                </div>
+                                <div class="cart">
+                                    <button onclick="page_redirect()">Thêm vào giỏ hàng</button>
+
+                                    <% if(checkBought) { %>
+                                        <button data-toggle="modal" data-target="#commentRatingModal" data-whatever="@mdo">Đánh giá</button>
+                                    <% } else { %>
+                                        <button data-toggle="modal" data-target="#warningModal" data-whatever="@mdo">Đánh giá</button>
+                                    <% } %>
+
+                                </div>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="warningModal">Thông báo</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3>Rất tiếc bạn không thể đánh giá và bình luận!</h3>
+                                                <p>Do bạn chưa mua sản phẩm này nên bạn không thể tham gia đánh giá và bình luận sản phẩm này.</p>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="commentRatingModal" tabindex="-1" role="dialog" aria-labelledby="commentRatingModalLabel" aria-hidden="true">
+                                    
+                                    <form action="/user/add-comment-rating" method="post">
+
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="commentRatingModal">Bình luận và đánh giá</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="">
+                                                    
+                                                        <p>Đánh giá của bạn:</p>
+            
+                                                        <input type="hidden" name="idProduct" value="<%= product.id %>">
+                                                        <input type="hidden" id="ratingPointInput" name="ratingPoint" value="0">
+            
+                                                        <div style="font-size: 30px" class="text-center" id="rating-form">
+                                                            <i onclick="displayClickToStar(1)" class="fa fa-star text-secondary"></i>
+                                                            <i onclick="displayClickToStar(2)" class="fa fa-star text-secondary"></i>
+                                                            <i onclick="displayClickToStar(3)" class="fa fa-star text-secondary"></i>
+                                                            <i onclick="displayClickToStar(4)" class="fa fa-star text-secondary"></i>
+                                                            <i onclick="displayClickToStar(5)" class="fa fa-star text-secondary"></i>
+                                                        </div>
+                                                        <script>
+                                                            function displayClickToStar(clickPoint) {
+                                                                let point = parseInt(clickPoint);
+                                                                $('#rating-form').html('');
+                                                                for (i = 1; i <= 5; i++) {
+                                                                    if (i <= point) {
+                                                                        $('#rating-form').append(`<i onclick="displayClickToStar(${i})" class="fa fa-star text-warning"></i> `)
+                                                                    }
+                                                                    else {
+                                                                        $('#rating-form').append(`<i onclick="displayClickToStar(${i})" class="fa fa-star text-secondary"></i> `)
+                                                                    }
+                                                                }
+                                                                $('#ratingPointInput').val(clickPoint);
+                                                            }
+                                                        </script>
+                                                        
+                                                    </div>
+            
+                                                    <div class="form-group">
+                                                        <label for="message-text" class="col-form-label">Bình luận của bạn:</label>
+                                                        <textarea name="commentContent" class="form-control" id="message-text" rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                    <button type="submit" class="btn btn-primary">Gửi</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---Comment-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="line">
+
+                        </div>
+                        <h6 class="title">
+                            Bình luận và đánh giá
+                        </h6>
+
+                        <div>
+                            <% if(commentRatingList == null) { %>
+                                <div class="my-3 p-3 bg-white rounded text-center">
+                                    <h3 class="my-3">RẤT TIẾC SẢN PHẨM NÀY CHƯA CÓ ĐÁNH GIÁ VÀ BÌNH LUẬN NÀO</h3>
+                                </div>
+                            <% } else { %>
+                
+                                <div class="my-3 p-3 bg-white rounded card">
+                                    
+                                    <div class="row py-3 d-flex align-items-center">
+                                        <div class="col-lg-3 col-md-12">
+                                            <div style="width: 175px; height: 175px;"   
+                                            class="rounded-circle d-flex align-items-center justify-content-center shadow m-auto">
+                                                <h1 style="font-size: 27px;">
+                                                    <span class="text-dark"><%= avarageRating.toPrecision(2) %> </span><i class="bi bi-star-fill text-warning"></i>
+                                                </h1>
+                                            </div>
+                
+                                            <div class="mt-2">
+                                                <p class="text-center"><%= countRating %> lượt đánh giá</p>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-lg-9 col-md-12">
+                
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (oneStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar bg-danger" role="progressbar" id="oneStarProgressBar" 
+                                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                
+                
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (twoStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar " role="progressbar" id="twoStarProgressBar" style="background-color: blueviolet;"
+                                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                
+                
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (threeStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar" role="progressbar" id="threeStarProgressBar"
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                
+                
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (fourStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar bg-info" role="progressbar" id="fourStarProgressBar"
+                                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                
+                                            
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <span class="float-right"><%= (fiveStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" id="fiveStarProgressBar"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                
+                                            <script>
+                                                displayProgressBar('fiveStarProgressBar', '<%= fiveStarCount*100/countRating %>')
+                                                displayProgressBar('fourStarProgressBar', '<%= fourStarCount*100/countRating %>')
+                                                displayProgressBar('threeStarProgressBar', '<%= threeStarCount*100/countRating %>')
+                                                displayProgressBar('twoStarProgressBar', '<%= twoStarCount*100/countRating %>')
+                                                displayProgressBar('oneStarProgressBar', '<%= oneStarCount*100/countRating %>')
+                                            </script>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="card my-3 p-3 bg-white rounded">
+                                    <% commentRatingList.forEach((commentRating, index) => {%>
+                                        <div class="media text-muted pt-3">
+                                            <img class="mr-2 rounded-circle img-thumbnail" width="64px" height="64px" src="/<%= commentRating.avatar %>">
+                
+                                        <% if(index < commentRatingList.length - 1){ %>
+                                            <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
+                                        <% } else { %>
+                                            <p class="media-body pb-3 mb-0 lh-125">
+                                        <% } %>
+                                                <strong class="d-block text-gray-dark"><%= commentRating.fullname %> 
+                                                    <span class="ml-2">
+                                                        <script>displayRatingPoint2Star('<%= commentRating.ratingPoint %>')</script>
+                                                    </span>
+                
+                                                    <span style="float: right;"><script>displayCommentDatetime('<%= commentRating.commentDate %>')</script></span>
+                                                </strong>
+                
+                                                <span>
+                                                    <%= commentRating.commentContent %>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+            <!---K-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="line">
+
+                        </div>
+                        <h6 class="title">
+                            Mô tả
+                        </h6>
+                        <div class="info">
+                            <%- product.description %>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h4 class="title title__detail">
+                            SẢN PHẨM TƯƠNG TỰ
+                        </h4>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="product__wrap product__wrap--slide">
+                            <ul class="list__item">
+                                <% relatedProductList.forEach((product, index) => { %>
+                                    <div class="item">
+                                        <div class="thumb">
+                                            <img src="/<%= product.productImage %>" alt="">
+                                        </div>
+                                        <h4 class="title__product">
+                                            <a href="/user/detail-product?idProduct=<%= product.id %>" class="simple__link">
+                                                Bộ Bàn Ghế Gỗ Hương Đá Kiểu Hoàng Gia Chân 12 Đẹp Giá Rẻ
+                                            </a>
+                                        </h4>
+                                        <div class="price">
+                                            <% if (product.salePercent != null) {%>
+                                                <del>
+                                                    <script>displayNumber2VND('<%= product.price %>')</script>
+                                                </del> 
+                                                <span class="retail__price">
+                                                    <script>displayNumber2VND('<%= product.price*(1 - (product.salePercent/100)) %>')</script>
+                                                </span>
+                                            <% } else { %>
+                                                <span class="retail__price"><script>displayNumber2VND('<%= product.price %>')</script></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+
+    </div> 
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumb mb-15">
+                        <img src="./assets/imgs/logo/2.png" alt="">
+                    </div>
+                    <div class="contact">
+                        <p class="desc">
+                            Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Hà Phát
+                        </p>
+                    </div>
+                    <div class="form">
+                        <input type="text" placeholder="Nhập email của bạn">
+                        <a href="" class="simple__link">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__wrap">
+                        <h4 class="title line__height--64">
+                            Thông tin chung
+                        </h4>
+                        <ul class="list__item">
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Giới thiệu về công ty Hà Phát
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Liên Hệ Mua Hàng
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Giới Thiệu Về Nội Thất Hà Phát
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Nhận diện thương hiệu Hà Phát
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__wrap">
+                        <h4 class="title line__height--64">
+                            Chính sách
+                        </h4>
+                        <ul class="list__item">
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Chính sách bảo mật thông tin
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Chính sách bảo hành
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">                              
+                                    Chính sách vận chuyển
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Chính sách đổi trả hàng Hà Phát
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Quy định về thanh toán
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__wrap">
+                        <h4 class="title line__height--64">
+                            Liên hệ mua hàng
+                        </h4>
+                        <ul class="list__info">
+                            <li class="item">
+                                <div class="phone">
+                                    <span>Phone: </span>
+                                    <a href="tel:+0948282883">0948-282-883</a>
+                                </div>
+                                <div class="fax">
+                                    <span>Fax: </span>
+                                    <a href="tel:+0243824971">0243-824-971</a>
+                                </div>
+                            </li>
+                            <li class="item">
+                                Trụ sở: Số 181 đường Đồng Chương, Phường Khúc Xuyên, Thành phố Bắc Ninh, Tỉnh Bắc Ninh.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+        integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

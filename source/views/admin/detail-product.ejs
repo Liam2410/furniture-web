@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Blank</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+
+    <!--Thư viện thêm và css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="js/rating-star.js"></script>
+    <script src="js/money-currency.js"></script>
+    <script src="js/progress-bar.js"></script>
+    <script src="js/date-time.js"></script>
+    <script src="js/chart.js"></script>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Hà Phát</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Shop
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-shopping-bag"></i>
+                    <span>Sản phẩm</span>
+                </a>
+                <div id="collapseProduct" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tùy chọn một mục:</h6>
+                        <a class="collapse-item" href="/admin/all-product">Tất cả sản phẩm</a>
+                        <a class="collapse-item" href="/admin/add-product">Thêm sản phẩm mới</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                    <span>Đơn hàng</span>
+                </a>
+                <div id="collapseOrder" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tùy chọn một mục:</h6>
+                        <a class="collapse-item" href="/admin/all-order">Tất cả đơn hàng</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Khách hàng</span>
+                </a>
+                <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tùy chọn một mục:</h6>
+                        <a class="collapse-item" href="/admin/all-customer">Tất cả khách hàng</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePost"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="far fa-fw fa-newspaper"></i>
+                    <span>Bài đăng</span>
+                </a>
+                <div id="collapsePost" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tùy chọn một mục:</h6>
+                        <a class="collapse-item" href="/admin/all-post">Tất cả bài đăng</a>
+                        <a class="collapse-item" href="/admin/add-post">Thêm bài đăng mới</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-heading">
+                Nhân sự
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmployee"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-user-tie"></i>
+                    <span>Nhân viên</span>
+                </a>
+                <div id="collapseEmployee" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tùy chọn một mục:</h6>
+                        <a class="collapse-item" href="buttons.html">Xem tất cả nhân viên</a>
+                        <a class="collapse-item" href="cards.html">Thêm nhân viên mới</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSalary"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="far fa-fw fa-money-bill-alt"></i>
+                    <span>Lương</span>
+                </a>
+                <div id="collapseSalary" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Tùy chọn một mục:</h6>
+                        <a class="collapse-item" href="buttons.html">Lương tất cả nhân viên</a>
+                        <a class="collapse-item" href="cards.html">Tùy chỉnh lương</a>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Đào Thị Hiền</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Thông tin người dùng
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cài đặt
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Đăng xuất
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Chi tiết sản phẩm</h1>
+
+                    <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-information-tab" data-toggle="pill" href="#pills-information" role="tab" aria-controls="pills-information-tab" aria-selected="true">Thông tin sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-comment-rating-tab" data-toggle="pill" href="#pills-comment-rating" role="tab" aria-controls="pills-comment-rating-tab" aria-selected="false">Bình luận và đánh giá</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-statistics-tab" data-toggle="pill" href="#pills-statistic" role="tab" aria-controls="pills-statistics-tab" aria-selected="false">Thống kê sản phẩm</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <div class="tab-pane fade show active" id="pills-information" role="tabpanel" aria-labelledby="pills-information-tab">
+                            Đợi view
+                        </div>
+                        
+                        <div class="tab-pane fade" id="pills-comment-rating" role="tabpanel" aria-labelledby="pills-comment-rating-tab">
+
+                            <% if(commentRatingList == null) { %>
+                                <div class="my-3 p-3 bg-white rounded shadow text-center">
+                                    <img height="350px" src="img/undraw_searching_p-5-ux.svg">
+                                    <h3 class="my-3">RẤT TIẾC SẢN PHẨM NÀY CHƯA CÓ ĐÁNH GIÁ VÀ BÌNH LUẬN NÀO</h3>
+                                </div>
+                            <% } else { %>
+                                
+                                <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-warning rounded shadow-sm">
+                                    <img class="mr-3" src="img/undraw_profile_pic_ic-5-t.svg" alt="" width="48" height="48">
+                                    <div class="lh-100">
+                                        <h6 class="mb-0 text-white lh-100">Chỉ số đánh giá và bình luận của người dùng về sản phẩm</h6>
+                                        <small>Cập nhật vào lúc: <script>document.write(new Date().toLocaleString());</script></small>
+                                    </div>
+                                </div>
+
+                                <div class="my-3 p-3 bg-white rounded shadow">
+
+                                    <div class="row py-3 d-flex align-items-center">
+                                        <div class="col-lg-3 col-md-12">
+                                            <div style="width: 175px; height: 175px;" 
+                                            class="rounded-circle d-flex align-items-center justify-content-center shadow m-auto">
+                                                <h1>
+                                                    <%= avarageRating.toPrecision(2) %> <i class="bi bi-star-fill text-warning"></i>
+                                                </h1>
+                                            </div>
+
+                                            <div class="mt-2">
+                                                <p class="text-center"><%= countRating %> lượt đánh giá</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-9 col-md-12">
+
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (oneStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar bg-danger" role="progressbar" id="oneStarProgressBar" 
+                                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (twoStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar " role="progressbar" id="twoStarProgressBar" style="background-color: blueviolet;"
+                                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (threeStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar" role="progressbar" id="threeStarProgressBar"
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star text-warning"></i>
+                                                <span class="float-right"><%= (fourStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress mb-4">
+                                                <div class="progress-bar bg-info" role="progressbar" id="fourStarProgressBar"
+                                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            
+                                            <h4 class="small font-weight-bold">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <span class="float-right"><%= (fiveStarCount*100/countRating).toPrecision(2) %>%</span>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" id="fiveStarProgressBar"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                            <script>
+                                                displayProgressBar('fiveStarProgressBar', '<%= fiveStarCount*100/countRating %>')
+                                                displayProgressBar('fourStarProgressBar', '<%= fourStarCount*100/countRating %>')
+                                                displayProgressBar('threeStarProgressBar', '<%= threeStarCount*100/countRating %>')
+                                                displayProgressBar('twoStarProgressBar', '<%= twoStarCount*100/countRating %>')
+                                                displayProgressBar('oneStarProgressBar', '<%= oneStarCount*100/countRating %>')
+                                            </script>
+                                            
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="my-3 p-3 bg-white rounded shadow">
+
+                                    <% commentRatingList.forEach((commentRating, index) => {%>
+                                        <div class="media text-muted pt-3">
+                                            <img class="mr-2 rounded-circle img-thumbnail" width="64px" height="64px" src="/<%= commentRating.avatar %>">
+
+                                        <% if(index < commentRatingList.length - 1){ %>
+                                            <p class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
+                                        <% } else { %>
+                                            <p class="media-body pb-3 mb-0 lh-125">
+                                        <% } %>
+                                                <strong class="d-block text-gray-dark"><%= commentRating.fullname %> 
+                                                    <span class="ml-2">
+                                                        <script>displayRatingPoint2Star('<%= commentRating.ratingPoint %>')</script>
+                                                    </span>
+        
+                                                    <span style="float: right;"><script>displayCommentDatetime('<%= commentRating.commentDate %>')</script></span>
+                                                </strong>
+        
+                                                <span>
+                                                    <%= commentRating.commentContent %>
+                                                </span>
+        
+                                                <div class="dropdown no-arrow">
+                                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                                        aria-labelledby="dropdownMenuLink">
+                                                        <div class="dropdown-header">Thao tác</div>
+                                                        <a class="dropdown-item" href="#">Xóa bình luận này</a>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    <% }) %>
+
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-statistic" role="tabpanel" aria-labelledby="pills-statistics-tab">
+                           
+                            <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                                <img class="mr-3" src="img/undraw_visual_data_re_mxxo.svg" alt="" width="48" height="48">
+                                <div class="lh-100">
+                                    <h6 class="mb-0 text-white lh-100">Tổng hợp các chỉ số thống kê về sản phẩm</h6>
+                                    <small>Cập nhật vào lúc: <script>document.write(new Date().toLocaleString());</script></small>
+                                </div>
+                            </div>
+
+                            <!-- Content Row -->
+                            <div class="row">
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-primary shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                        TỔNG DOANH THU</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <script>displayNumber2VND('<%= totalPriceQuantity.totalProductPrice %>')</script>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-coins fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-success shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                        SẢN PHẨM ĐÃ BÁN</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><%= totalPriceQuantity.totalQuantity == null ? 0 : totalPriceQuantity.totalQuantity %> SP</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-dolly-flatbed fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-info shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">TỒN KHO
+                                                    </div>
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><%= 100 - (totalPriceQuantity.totalQuantity*100/countProductSale.quantity) %>%</div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="progress progress-sm mr-2">
+                                                                <div id="inventoryBar" class="progress-bar bg-info" role="progressbar"
+                                                                    aria-valuenow="50" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                                
+                                                                <script>displayProgressBar('inventoryBar', '<%= 100 - (totalPriceQuantity.totalQuantity*100/countProductSale.quantity) %>')                                                                </script>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-boxes fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pending Requests Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card border-left-warning shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                        TỔNG SỐ LẦN DISCOUNT</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><%=countProductSale.countSale == null ? 0 : countProductSale.countSale%> lần</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-percentage fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Area Chart -->
+                            <div class="w-100">
+                                <div class="card shadow mb-4">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Doanh thu của sản phẩm trong năm nay</h6>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div style="position: relative; height: 350px; width: 100%;">
+                                            <canvas id="productAreaChart"></canvas>
+
+                                            <% if(orderSuccessList != null) { %>
+                                                <!--Đổ dữ liệu cho biểu đồ-->
+                                                <% orderSuccessList.forEach((element, index) => { %>
+                                                    <input id="monthRevenue<%= element.month %>" type="hidden" value="<%= element.monthRevenue %>">
+                                                <% }) %>
+                                            <% } %>
+                                            <script>productRevenueChart()</script>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-100">
+                                <div class="card shadow mb-4 mt-3">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Các khách hàng đã mua hàng</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="orderCustomerDataTable" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tên khách hàng</th>
+                                                        <th>Địa chỉ nhận hàng</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Đơn giá</th>
+                                                        <th>Ngày đặt hàng</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>Tên khách hàng</th>
+                                                        <th>Địa chỉ nhận hàng</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Đơn giá</th>
+                                                        <th>Ngày đặt hàng</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <% if( customerOrderList != null) {%>
+                                                        <% customerOrderList.forEach((customerOrder, index) => { %>
+                                                            <tr>
+                                                                <td><%= customerOrder.fullname %></td>
+                                                                <td><%= customerOrder.shippingAddress %></td>
+                                                                <td><%= customerOrder.quantityProduct %></td>
+                                                                <td><script>displayNumber2VND('<%= customerOrder.productPrice %>')</script></td>
+                                                                <td><script>displayOrderDatetime('<%= customerOrder.orderDate %>')</script></td>
+                                                            </tr>
+                                                        <% }) %>
+                                                    <% } %>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; By Dao Thi Hien 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <!-- Page level custom scripts -->
+    <script src="js/datatable.js"></script>
+    
+</body>
+
+</html>

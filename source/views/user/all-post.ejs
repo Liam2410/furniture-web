@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế nội thất - Nội thất Hà Phát</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo/wood-cabin.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- <link rel="stylesheet" href="/assets/css/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/extra.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./assets/js/date-time.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cuttr/1.4.1/cuttr.min.js"></script>
+
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <img src="./assets/imgs/logo/1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <ul class="navigation">
+                        <li class="item">
+                            <a href="/user" class="simple__link">Trang chủ</a>
+                        </li>
+                        <li class="item">
+                            <a href="" class="simple__link">Sản phẩm</a>
+                            <ul class="sub__menu">
+                                <li class="item">
+                                    <a href="/user/all-product?type=Bàn Ghế Gỗ" class="sub__link">Bàn Ghế Gỗ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/user/all-product?type=Kệ Ti Vi" class="sub__link">Kệ Ti Vi</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/user/all-product?type=Giường Ngủ" class="sub__link">Giường Ngủ</a>
+                                </li>
+                                <li class="item">
+                                    <a href="/user/all-product?type=Tủ Quần Áo" class="sub__link">Tủ Quần Áo</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="sub__link">Bàn Trang Điểm</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="sub__link">Bộ Bàn Ăn</a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" class="sub__link">Phòng Thờ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a href="/user/order" class="simple__link">Đơn hàng</a>
+                        </li>
+                        <li class="item">
+                            <a href="/user/all-post" class="simple__link active">Bài viết</a>
+                        </li>
+                        <li class="item">
+                            <a href="/user/contact" class="simple__link">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1">
+                    <a href="/user/cart">
+                        <div class="cart__product--wrap">
+                            <div class="cart__summery">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+                            </div> 
+                            <div style="font-size: 10px;" class="number__product--cart">
+                                <%= cartNumber %>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="slider__products">
+            <img src="./assets/imgs/blogList/pg1.jpg" alt="" class="thumb">
+        </div> 
+        <section class="blog__wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3 class="blog__title">
+                            CATEGORY: <span>BLOG NỘI THẤT</span>
+                        </h3>
+                        <p class="desc">
+                            Blog tổng hợp kiến thức nội thất mới nhất về những mẫu nhà đẹp. Mẫu căn hộ chung cư, nhà phố, biệt thự đẹp. Luôn cập nhật những bài viết, mẹo vặt nội thất, cẩm nang nội thất. Những ý tưởng thiết kế nội thất và những mẫu nhà có nội thất đẹp, giúp bạn tham khảo trước khi làm nhà.
+                        </p>
+                        <ul class="list__blog">
+                            <% postList.forEach((post, index) => { %>
+                                <li class="item__blog">
+                                    <div class="thumb">
+                                        <a href="./blogDetail.html" class="simple__link">
+                                            <img src="/<%= post.postImage %>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="item__blog--info">
+                                        <div class="classify">
+                                            <%= post.tag %>
+                                        </div>
+                                        <h5 class="blog__info--title">
+                                            <a href="/user/detail-post?idPost=<%= post.idPost %>" class="simple__link">
+                                                <%= post.title %>
+                                            </a>
+                                        </h5>
+                                        <div class="date"><script>displayAddPostDatetime2('<%= post.addDate %>')</script></div>
+                                        <p class="desc">
+                                            <%= post.description %>
+                                        </p>
+                                        <script>
+                                            new Cuttr('.desc', {
+                                                truncate: 'words',
+                                                length: 30
+                                            });
+                                        </script>
+                                    </div>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="actual__title">
+                            Thi Công Thực Tế
+                        </h4>
+                        <ul class="actual__construction">
+                            <li class="item__wrap">
+                                <div class="thumb">
+                                    <img src="./assets/imgs/blogList/EKE-Thi-cong-noi-that-biet-thu-Da-Lat-263x175.jpg" alt="">
+                                </div>
+                                <div class="item__info">
+                                    <h6 class="item__title">
+                                        Thi công nội thất biệt thự tại Đà Lạt																	
+                                    </h6>
+                                    <div class="date">
+                                       <span> 14/12/2020</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item__wrap">
+                                <div class="thumb">
+                                    <img src="./assets/imgs/blogList/thi-cong-noi-that-can-ho-chung-cu-2-phong-ngu-kingdom-101-2-263x175.jpg" alt="">
+                                </div>
+                                <div class="item__info">
+                                    <h6 class="item__title">
+										Thi công nội thất căn hộ chung cư One Verandah 2 phòng ngủ																	
+                                    </h6>
+                                    <div class="date">
+                                       <span> 09/02/2020</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item__wrap">
+                                <div class="thumb">
+                                    <img src="./assets/imgs/blogList/Thiet-ke-Cai-tao-noi-that-can-ho-chung-cu-panorama-1-263x175.jpg" alt="">
+                                </div>
+                                <div class="item__info">
+                                    <h6 class="item__title">
+                                        Thi công cải tạo nội thất căn hộ Panorama Q7																
+                                    </h6>
+                                    <div class="date">
+                                       <span> 09/10/2022</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item__wrap">
+                                <div class="thumb">
+                                    <img src="./assets/imgs/blogList/thi-cong-noi-that-can-ho-chung-cu-2-phong-ngu-kingdom-101-2-263x175.jpg" alt="">
+                                </div>
+                                <div class="item__info">
+                                    <h6 class="item__title">
+                                        Thi công nội thất căn hộ chung cư Kingdom 101																	
+                                    </h6>
+                                    <div class="date">
+                                       <span> 17/08/2022</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- footer -->
+        <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumb mb-15">
+                        <img src="./assets/imgs/logo/2.png" alt="">
+                    </div>
+                    <div class="contact">
+                        <p class="desc">
+                            Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Hà Phát
+                        </p>
+                    </div>
+                    <div class="form">
+                        <input type="text" placeholder="Nhập email của bạn">
+                        <a href="" class="simple__link">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__wrap">
+                        <h4 class="title line__height--64">
+                            Thông tin chung
+                        </h4>
+                        <ul class="list__item">
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Giới thiệu về công ty Hà Phát
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Liên Hệ Mua Hàng
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Giới Thiệu Về Nội Thất Hà Phát
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Nhận diện thương hiệu Hà Phát
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__wrap">
+                        <h4 class="title line__height--64">
+                            Chính sách
+                        </h4>
+                        <ul class="list__item">
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Chính sách bảo mật thông tin
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Chính sách bảo hành
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">                              
+                                    Chính sách vận chuyển
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Chính sách đổi trả hàng Hà Phát
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="simple__link">
+                                    Quy định về thanh toán
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__wrap">
+                        <h4 class="title line__height--64">
+                            Liên hệ mua hàng
+                        </h4>
+                        <ul class="list__info">
+                            <li class="item">
+                                <div class="phone">
+                                    <span>Phone: </span>
+                                    <a href="tel:+0948282883">0948-282-883</a>
+                                </div>
+                                <div class="fax">
+                                    <span>Fax: </span>
+                                    <a href="tel:+0243824971">0243-824-971</a>
+                                </div>
+                            </li>
+                            <li class="item">
+                                Trụ sở: Số 181 đường Đồng Chương, Phường Khúc Xuyên, Thành phố Bắc Ninh, Tỉnh Bắc Ninh.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
